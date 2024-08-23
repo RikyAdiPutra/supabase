@@ -24,11 +24,17 @@ export default function SupabasePage() {
 
     dataSupabase();
   }, []);
-
-  console.log(data);
   return (
     <div>
       <h1>SupabasePage</h1>
+      {/* {data &&
+        data.map((item) => {
+          return <div key={item.id}>{item.email}</div>;
+        })} */}
+
+      {data.map((item) => {
+        return <div key={item.id}>{item.id}</div>;
+      })}
     </div>
   );
 }
